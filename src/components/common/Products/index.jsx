@@ -22,6 +22,7 @@ const Products = () => {
           key={ index }   
           title={ product.title }
           price={ product.price }
+          piece={ product.piece }
           image_path={ product.image_url }
           onClick={ () => addProduct(product) }
         />

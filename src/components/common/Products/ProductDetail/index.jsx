@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.css';
 
-const ProductDetail = ({ title, price, image_path, onClick }) => {
+const ProductDetail = ({ title, price, piece, image_path, onClick }) => {
   return (
     <div className="card">
       <div className="card-img">
@@ -10,7 +10,7 @@ const ProductDetail = ({ title, price, image_path, onClick }) => {
       <div className="card-title">
         <p>{ title }</p>
       </div>
-      <span className="idr-icon">Rp. { price }</span>
+      <span className="idr-icon">Rp. { price } / { piece }</span>
       <div className="overlay">
         <div className="card-button" onClick={ onClick }>Add To Cart</div>
       </div>

@@ -15,7 +15,7 @@ const validationSchema = yup.object().shape({
   street: yup.string().label('Street').required().max(255),
   zipcode: yup.string().label('Zipcode').required().max(10),
   city: yup.string().label('City').required().max(10),
-  suite: yup.string().label('Suite').required().max(25),
+  // suite: yup.string().label('Suite').required().max(25),
 })
 
 const Address = () => {
@@ -108,7 +108,7 @@ const Address = () => {
                   selectedAddress={ selectedAddress }
                 />
 
-                <Field 
+                {/* <Field 
                   errors={ errors.suite }
                   name={ 'suite' }
                   placeholder={ 'Suite' }
@@ -116,7 +116,7 @@ const Address = () => {
                   label={ 'Suite' }
                   register={ register }
                   selectedAddress={ selectedAddress }
-                />
+                /> */}
               </div>
 
               <button type="submit" className="btn btn-primary btn-effect">Next</button>
