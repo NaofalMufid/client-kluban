@@ -22,7 +22,6 @@ export const AuthProvider = ({ children }) => {
   const signIn = async (data) => {
     try { 
       const res = await api.post('/api-token', data);
- 
       if (res.status >= 400) {
         throw new Error("Bad response");
       }

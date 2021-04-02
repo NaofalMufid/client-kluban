@@ -120,11 +120,11 @@ const Payment = () => {
                         img={ card }
                       />
 
-                      <PaymentMethod 
+                      {/* <PaymentMethod 
                         register={ register }
                         value={ "bank_slip" }
                         img={ slip }
-                      />
+                      /> */}
                     </div>
 
                     <fieldset hidden={ watch('payment_method') !== 'credit_card' }>

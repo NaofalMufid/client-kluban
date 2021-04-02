@@ -104,6 +104,11 @@
   font-size: 1.3rem;
   margin-bottom: 1rem;
 }
+.order-product-sent {
+  color: rgb(84, 84, 84);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
 
 .icon-status:before {
   font-family: "Font Awesome 5 Free";

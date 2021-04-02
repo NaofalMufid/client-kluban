@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Item = ({ status, date, items_checkout, total }) => {
+const Item = ({ status, date, items_checkout, total, delivery }) => {
   
   const dateFormat = (date) => {
     return new Date(date)
@@ -29,6 +29,7 @@ const Item = ({ status, date, items_checkout, total }) => {
           ))}
         </div>
         <p className="order-product-total"> Total Rp. { total },00</p>
+        <p className="order-product-sent">Your order will be sent to the address : <strong>{ delivery }</strong></p>
       </div>
     </div>
   )

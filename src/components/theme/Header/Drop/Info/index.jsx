@@ -5,7 +5,7 @@ const Info = () => {
   return (
     <div className="info-category">
       <span className="icon-hamburger" />
-      <p>All Categories</p>
+      <p>Fresh Food</p>
     </div>  
   )
 }

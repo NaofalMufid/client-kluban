@@ -7,6 +7,7 @@ import Item from './Item';
 
 const Order = () => {
   const [orders, setOrders] = useState([]);
+  const [delivery, setAddress] = useState([]);
   const { auth } = useAuth();
 
   useEffect(() => {
@@ -16,6 +17,16 @@ const Order = () => {
     });
   }, []);
 
+  useEffect(() => {
+    ApiAuth(auth.token).get('/address')
+    .then(({ data }) => {
+      setAddress(data)
+    });
+  }, []);
+  var send_to = "";
+  delivery.map((deliver, ind) => (
+    send_to = deliver.street +" "+ deliver.city + " zipcode: " + deliver.zipcode
+  ))
   return (
     <div className="order-wrapper">
       <h4 className="order-title">Past orders</h4>
@@ -27,6 +38,7 @@ const Order = () => {
             items_checkout={ order.items }
             total={ order.total }
             status={ order.status.message }
+            delivery={ send_to }
           />
         ))}
       </div>
@@ -34,4 +46,4 @@ const Order = () => {
   )
 }
 
-export default Order;
+export default Order; 
